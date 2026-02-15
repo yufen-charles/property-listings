@@ -15,8 +15,11 @@
     header {
       background: #111827;
       color: #fff;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
+    }
+    h1{
+      margin-top: 70px;
     }
     .container {
       max-width: 900px;
@@ -93,12 +96,50 @@
       background: #0077b6;
       margin: 40px 0;
       border-radius: 1px;
-}
+    }
+    /* House Container */
+    .house {
+      position: relative;
+      top: 60px;
+      width: 100px;
+      height: 70px;
+      background: #ffffff;
+      margin: 0 auto 20px;
+      /* border-radius: 4px; */
+    }
+    /* Roof */
+    .house::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      /* border-bottom: 50px solid #2563eb; */
+      border-bottom: 50px solid #fff;
+    }
+    /* Door */
+    .house::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 35px;
+      background: #111827;
+      /* border-radius: 3px; */
+    }
   </style>
 </head>
 <body>
 
 <header>
+  <!-- <img src="https://thumbs2.imgbox.com/1f/a2/SUmHuakM_t.png" alt="House Logo" class="house_logo"> -->
+  <div class="house"></div>
   <h1>Property Listings</h1>
 </header>
 
